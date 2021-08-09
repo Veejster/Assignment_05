@@ -16,6 +16,7 @@ strChoice = ''  # User input
 # Get user Input
 print('The Magic CD Inventory\n')
 
+
 #  1.Display menu allowing the user to choose:
 
 while True:
@@ -50,6 +51,7 @@ while True:
         file.close()
         print("File Loaded! \n")
 
+
 # 2. Add data to the table 2d-list each time the user wants to add data
 
     elif strChoice == 'a':
@@ -62,6 +64,7 @@ while True:
             "Title": strTitle,
             "Artist": strArtist
             })
+
 
 # 3. Display the current data to the user each time
 
