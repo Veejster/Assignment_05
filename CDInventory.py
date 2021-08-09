@@ -4,20 +4,20 @@
 # Change Log: (Who, When, What)
 # DBiesinger, 2030-Jan-01, Created File
 # VJackson, 2021-Aug-06, Updated File to use list of
-#----------------------- dictionaries data structure
+# -----------------------dictionaries data structure
 #------------------------------------------#
 
 # Declare variabls
 
 key = ['ID', 'Title', 'Artist']
 dctLst = []
-strChoice = '' # User input
+strChoice = ''  # User input
 
 # Get user Input
 print('The Magic CD Inventory\n')
 
 #  1.Display menu allowing the user to choose:
-    
+
 while True:
     print(
         '[l] load Inventory from file\n[a] Add CD\n[i] Display Current Inventory'
@@ -25,15 +25,14 @@ while True:
     print(
         '[d] delete CD from Inventory\n[s] Save Inventory to file\n[x] exit'
         )
-    strChoice = input('l, a, i, d, s or x: ').lower()  
-    # convert choice to lower case at time of input
+    strChoice = input('l, a, i, d, s or x: ').lower()
+# convert choice to lower case at time of input
     print()
 
 
 # 5. Exit the program if the user chooses so
 
     if strChoice == 'x':
-        #
         break
 
 
@@ -65,7 +64,6 @@ while True:
             })
 
 # 3. Display the current data to the user each time
-#    the user wants to display the data
 
     elif strChoice == 'i':
         print(
@@ -92,11 +90,13 @@ while True:
             if element in dctLst:
                 dctLst.remove(element)
         print("Choice deleted! \n")
-            
+
     elif strChoice == 's':
         with open('CDInventory.txt', 'w') as wrtfile:
             for i in dctLst:
-                filetemp = str(i['ID'] + ',' + i['Title'] +',' + i['Artist'] + '\n')
+                filetemp = str(
+                    i['ID'] + ',' + i['Title'] + ',' + i['Artist'] + '\n'
+                    )
                 wrtfile.write(filetemp)
         wrtfile.close()
         print("File Saved! \n")
