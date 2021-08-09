@@ -3,7 +3,8 @@
 # Desc: Starter Script for Assignment 05
 # Change Log: (Who, When, What)
 # DBiesinger, 2030-Jan-01, Created File
-# VJackson, 2021-Aug-06, 
+# VJackson, 2021-Aug-06, Updated File to use list of
+#----------------------- dictionaries data structure
 #------------------------------------------#
 
 # Declare variabls
