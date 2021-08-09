@@ -82,6 +82,9 @@ while True:
                 )
         print('\n')
 
+
+# 6. Delete existing data
+
     elif strChoice == 'd':
         dlt = input("What is the ID of CD you want to delete?")
         for i in range(len(dctLst)):
@@ -90,6 +93,9 @@ while True:
             if element in dctLst:
                 dctLst.remove(element)
         print("Choice deleted! \n")
+
+
+# 7. Save data to text file
 
     elif strChoice == 's':
         with open('CDInventory.txt', 'w') as wrtfile:
@@ -100,5 +106,6 @@ while True:
                 wrtfile.write(filetemp)
         wrtfile.close()
         print("File Saved! \n")
+
     else:
         print('Please choose either l, a, i, d, s or x!')
